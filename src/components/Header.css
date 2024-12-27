@@ -1,0 +1,218 @@
+.animated-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 8px; /* Optional for rounded corners */
+  }
+  
+  /* Position spans for animation */
+  .animated-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #dc89ea, #ff6c3b);
+    animation: animate1 2s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animated-button span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #8f6eb0, #ffc43b);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .animated-button span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #9362c4, #ff833b);
+    animation: animate3 2s linear infinite;
+  }
+  
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animated-button span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, #171618, #3bff3b);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  /* Button styles */
+  .private-funding {
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to right, rgba(255,151,0,1), rgba(251,75,2,1) );
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px; /* Matches the wrapper border radius */
+    outline: none;
+  }
+
+
+
+
+
+
+
+
+
+  /* moblie  */
+
+  .animated-button-mobile {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 8px; /* Optional for rounded corners */
+  }
+  
+  /* Position spans for animation */
+  .animated-button-mobile span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #dc89ea, #ff6c3b);
+    animation: animate1 2s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animated-button-mobile span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #8f6eb0, #ffc43b);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .animated-button-mobile span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #9362c4, #ff833b);
+    animation: animate3 2s linear infinite;
+  }
+  
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animated-button-mobile span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, #171618, #3bff3b);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  /* Button styles */
+  .private-funding-mobile {
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to right, rgba(255,151,0,1), rgba(251,75,2,1) );
+    color: #fff;
+    border: none;
+    padding:4px;
+    
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 8px; /* Matches the wrapper border radius */
+    outline: none;
+  }
+
+  .private-mobile{
+    margin-right: 2px;
+  }

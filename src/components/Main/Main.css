@@ -1,0 +1,89 @@
+.explore-btn1 {
+  width: auto;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ff7b2f;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  border-radius: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.explore-btn1:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+@media(max-width:780px){
+  .container{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.explore-btn1:active {
+  color: #000;
+}
+
+.explore-btn1:active:after {
+  background: transparent;
+}
+
+.explore-btn1:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Add media query for responsiveness below 780px */
+@media screen and (max-width: 780px) {
+  .explore-btn1 {
+    height: 40px; /* Smaller height */
+    font-size: 14px; /* Adjust font size */
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    bottom: 10px; /* Slightly higher from bottom */
+    right: 10px; /* Adjust right positioning */
+    border-radius: 8px; /* Slightly smaller radius */
+  }
+
+  .explore-btn1:before {
+    filter: blur(3px); /* Reduce the glow blur for smaller screens */
+  }
+}

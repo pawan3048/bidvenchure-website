@@ -1,0 +1,170 @@
+.animated-border {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff8c00, #ff0080, #40e0d0, #ff8c00);
+    background-size: 400%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .animated-border:hover::before {
+    opacity: 0.2;
+    animation: gradientMove 2s infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  
+  /* Infinite line animation */
+  @keyframes line-left {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes line-right {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 100%;
+    }
+  }
+  
+  .animated-border {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .animate-line-left {
+    animation: line-left 3s linear infinite;
+  }
+  
+  .animate-line-right {
+    animation: line-right 3s linear infinite;
+  }
+  
+  
+  .explore-btn {
+    width: auto;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #ff7b2f;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .explore-btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite; /* Glowing effect applied permanently */
+    opacity: 1; /* Keep the glow visible all the time */
+    border-radius: 10px;
+  }
+  
+  .explore-btn:active {
+    color: #000;
+  }
+  
+  .explore-btn:active:after {
+    background: transparent;
+  }
+  
+  .explore-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+  
+  
+  
+  .service-item {
+    flex-basis: calc(33.333% - 20px);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Add border-radius to the service item itself */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out; /* Smooth transition for zoom */
+    transform: scale(1); /* Initial scale */
+    position: relative;
+    padding-bottom: 20px; /* Add space for the gradient border */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+  }
+  
+  .service-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-image: linear-gradient(to right, #d4d70d, #da4311, #11dada); /* Gradient effect for the border */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 200% 6px; /* Control the height of the gradient line */
+    animation: moveGradient 5s linear infinite normal forwards; /* Apply the animation */
+    border-radius: 5px; /* Apply the border-radius to the gradient */
+  }
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% bottom; /* Start from left */
+    }
+    50% {
+      background-position: 100% bottom; /* Move to the right */
+    }
+    100% {
+      background-position: 0% bottom; /* Go back to the left */
+    }
+  }

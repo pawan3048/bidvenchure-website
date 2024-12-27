@@ -1,0 +1,235 @@
+
+  .sideimage{
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+  }
+  
+  .header1 {
+    text-align: justify;
+  }
+  
+  .highlight {
+    color: #4caf50; /* or any color you prefer */
+  }
+  
+  .features-illustration {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 105px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .feature-card {
+    display: flex;
+    align-items: center;
+    /* gap: 15px; */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    
+    background-image: linear-gradient(to bottom, #6f0dd7, #5a0457, #11dada);
+    background-position: left center; 
+    background-repeat: no-repeat;
+    background-size: 6px 100%; 
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px; /* Adjust icon size */
+    transition: background-color 0.3s ease;
+  }
+
+
+  @media (max-width: 780px) {
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+
+
+  .feature-card:hover .icon-circle {
+    background: linear-gradient(to right, #f0a432, #ff6c3b);
+    color: #000;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  .red{
+    background-color: red;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  .yellow {
+    background-color: rgb(73, 113, 243);
+  }
+  
+  .feature-text h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .feature-text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    /* today */
+    /* padding: 20px; */
+  }
+  
+  /* Main Flex Container */
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    gap: 20px;
+  }
+  
+  /* Left Section - Features */
+  .features-section {
+    flex: 1; /* Takes 50% width */
+    /* today */
+    /* padding: 20px; */
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: #ff7b2f; /* Highlight color */
+  }
+  
+  .description1 {
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .feature-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .purple {
+    background-color: #6c5ce7;
+  }
+  
+  .yellow {
+    background-color: #fdcb6e;
+  }
+  
+  .green {
+    background-color: #00b894;
+  }
+  
+  .red {
+    background-color: #d63031;
+  }
+  
+  /* Right Section - Image */
+  .image-section {
+    flex: 1; /* Takes 50% width */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+  }
+  
+  .side-image {
+    max-width: 80%; /* Ensure the image doesn't overflow */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+
+
+
+/* responsive design */
+/* responsive design */
+@media (max-width: 780px) {
+    .image-section {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
